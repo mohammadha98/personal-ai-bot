@@ -63,11 +63,11 @@ const initializeChain = async (initialPrompt) => {
 async function personalChatChain(prompt, isFirst) {
     if (isFirst) {
         try {
-            const initialPrompt = prompt;
+            const initialPrompt =`User: ${prompt}\nAssistant:`;
             chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
             const response = await initializeChain(initialPrompt);
-           const persianResponse =await translatte(response.text,{from:"en",to:'fa'});
-            return persianResponse;
+         
+            return response;
         }
         catch (error) {
             console.log(error);
@@ -78,9 +78,10 @@ async function personalChatChain(prompt, isFirst) {
         //     role:"user",
         //     content:prompt
         // });
-        chatHistory.push(new schema_1.ChatMessage(prompt, "user"));
+        const enginePrompt = `User: ${prompt}\nAssistant:`;
+        chatHistory.push(new schema_1.ChatMessage(enginePrompt, "user"));
         const response = await chain.call({
-            question: prompt,
+            question: enginePrompt,
             chat_history: chatHistory,
         });
         // chatHistory.push({
@@ -89,8 +90,8 @@ async function personalChatChain(prompt, isFirst) {
         // });
         chatHistory.push(new schema_1.ChatMessage(response.text, "bot"));
 
-        const persianResponse =await translatte(response.text,{from:"en",to:'fa'});
-        return persianResponse;
+        // const persianResponse =await translatte(response.text,{from:"en",to:'fa'});
+        return response;
 
     
     }
