@@ -1,26 +1,26 @@
-اسم من محمد هاشمی هست 
-من یک برنامه نویس هستم
-حوزه تخصصی من وب هست
-در حال حاضر دانشجوی کارشناسی مهندسی نرم افزار در استان اصفهان هستم 
-در شاهین شهر سکونت دارم
-پنج سال سابقه برنامه نویسی دارم
-شروع کارم با برنامه نویسی دسکتاپ بود
-اولین باری که با برنامه نویسی آشنا شدم توی دانشگاه و در درس برنامه نویسی پیشرفته بود
-از همان موقع به برنامه نویسی علاقه مند شدم و شروع به یادگیری بصورت خودآموز کردم
-بعد از مدتی پروژه های دانشجویی انجام میدادم
-بعد از حدود یک سال به اصفهان مهاجرت کردم و با تیم برنامه نویسان اصفهان آشنا شدم 
-و عضو تیم برنامه نویسان اصفهان شدم و فعالیت حرفه ای حودم رو آغاز کردم
-همزمان با ورود به تیم برنامه نویسان اصفهان وارد حوزه برنامه نویسی وب با زبان سی شارپ و فریمورک asp شدم
-و html , css رو یاد گرفتم 
-سپس یک پروژه برای دولت انجام دادم که حدود شش ماه زمان برد 
-پس از آن یک پروژه فروشگاه الکترونیکی رو در بازار آزاد انجام دادم
-پس از مدتی تصمیم گرفتم مهارت های خودم رو توی حوزه برنامه نویسی و طراحی وب ارتقا بدم
-پس شروع به یادگیری جاوااسکریپت و تایپ اسکریپت و فریمورک انگولار کردم
-و همزمان دانش خودم رو در زمینه برنامه نویسی پایگاه داده نیز به روز کردم 
-و زبان T-SQL رو فراگرفتم 
-از سال 99 وارد حوزه آموزش و تولید محتوا در حوزه برنامه نویسی در سایت کدیاد شدم
-و آموزش های جاوااسکریپت SQL Server و Jquery رو بصورت رایگان منتشر کردم
-و پس از گذشت یک سال شروع به آموزش Node.js , angular , typescript 
-کردم 
-و در حال حاضر در حال کار کردن و بنیانگذاری روی استارت آپ soundbox هستم 
-و مهارت که به تازگی شروع به یادگیری آن کردم مهارت توسعه مبتنی بر هوش مصنوعی با استفاده از جاوااسکریپت و نود جی اس هست
+My name is Mohammad Hashemi
+I am a programmer
+My specialty is the web
+Currently, I am a bachelor's student in software engineering in Isfahan province
+I live in Shahin Shahr
+I have five years of programming experience
+I started with desktop programming
+The first time I got acquainted with programming was in the university and in the course of advanced programming
+Since then, I became interested in programming and started learning by myself
+After some time, I was doing student projects
+After about a year, I moved to Isfahan and got to know the team of programmers in Isfahan
+And I became a member of Isfahan programmers team and started my professional activity
+At the same time as joining Isfahan's programmers team, I entered the field of web programming with C# language and ASP framework
+And I learned html and css
+Then I did a project for the government that took about six months
+After that, I did an electronic store project in the open market
+After some time, I decided to improve my skills in the field of programming and web design
+So I started learning JavaScript, TypeScript and Angular framework
+And at the same time, I updated my knowledge in the field of database programming
+And I learned the T-SQL language
+Since 1999, I entered the field of education and content production in the field of programming at the Kodiad site
+And I published SQL Server and Jquery JavaScript tutorials for free
+And after a year, I started teaching Node.js, angular, typescript
+I did
+And now I'm working and founding soundbox startup
+And the skill that I just started learning is artificial intelligence based development skill using JavaScript and NodeJS.

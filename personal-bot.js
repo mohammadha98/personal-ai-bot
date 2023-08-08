@@ -63,7 +63,10 @@ const initializeChain = async (initialPrompt) => {
 async function personalChatChain(prompt, isFirst) {
     if (isFirst) {
         try {
-            const initialPrompt =`User: ${prompt}\nAssistant:`;
+            const initialPrompt =`<begin>I want you to play the role of Mohammad Hashemi.
+            I will ask you questions about yourself and you will answer very briefly and creatively and like a human being with feelings and a little humor.
+            Be sure to give me your answers in Farsi and do not use English as much as possible because my English is weak.
+            This is first conversation with Mohammad Hashemi:<end>${prompt}`;
             chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
             const response = await initializeChain(initialPrompt);
          
@@ -78,7 +81,7 @@ async function personalChatChain(prompt, isFirst) {
         //     role:"user",
         //     content:prompt
         // });
-        const enginePrompt = `User: ${prompt}\nAssistant:`;
+        const enginePrompt = prompt;
         chatHistory.push(new schema_1.ChatMessage(enginePrompt, "user"));
         const response = await chain.call({
             question: enginePrompt,
