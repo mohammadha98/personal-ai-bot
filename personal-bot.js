@@ -36,6 +36,22 @@ const initializeChain = async (initialPrompt) => {
         modelName: "gpt-3.5-turbo",
         openAIApiKey: apiKey,
     });
+
+    let streamedResponse = "";
+
+    const streamModel = new openai_1.ChatOpenAI({
+        streaming: true,
+        temperature: 0.9,
+        modelName: "gpt-3.5-turbo",
+        openAIApiKey:apiKey,
+        callbacks: [
+            {
+              handleLLMNewToken(token) {
+                streamedResponse += token;
+              },
+            },
+          ]
+    });
     //HNSWLib
     // Load the docs into the vector store
     //    const fileContent= readFileContent(filePath);
@@ -48,7 +64,7 @@ const initializeChain = async (initialPrompt) => {
     // const directory = path.join(__dirname + "/public");
     // await vectorStore.save(directory);
     // const loadedVectorStore=await HNSWLib.load(directory,new OpenAIEmbeddings({openAIApiKey:apiKey}));
-    chain = chains_1.ConversationalRetrievalQAChain.fromLLM(model, vectorStore.asRetriever(), {
+    chain = chains_1.ConversationalRetrievalQAChain.fromLLM(streamModel, vectorStore.asRetriever(), {
         verbose: true,
     });
     const response = await chain.call({
@@ -66,7 +82,9 @@ async function personalChatChain(prompt, isFirst) {
             const initialPrompt =`<begin>I want you to play the role of Mohammad Hashemi.
             I will ask you questions about yourself and you will answer very briefly and creatively and like a human being with feelings and a little humor.
             Be sure to give me your answers in Farsi and do not use English as much as possible because my English is weak.
-            This is first conversation with Mohammad Hashemi:<end>${prompt}`;
+            This is first conversation with Mohammad Hashemi:<end>
+            
+            ${prompt}`;
             chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
             const response = await initializeChain(initialPrompt);
          
