@@ -32,26 +32,11 @@ const loader = new text_1.TextLoader(filePath);
 })();
 const initializeChain = async (initialPrompt) => {
     const model = new openai_1.ChatOpenAI({
-        temperature: 0.9,
+        temperature: 0.3,
         modelName: "gpt-3.5-turbo",
         openAIApiKey: apiKey,
     });
 
-    let streamedResponse = "";
-
-    const streamModel = new openai_1.ChatOpenAI({
-        streaming: true,
-        temperature: 0.9,
-        modelName: "gpt-3.5-turbo",
-        openAIApiKey:apiKey,
-        callbacks: [
-            {
-              handleLLMNewToken(token) {
-                streamedResponse += token;
-              },
-            },
-          ]
-    });
     //HNSWLib
     // Load the docs into the vector store
     //    const fileContent= readFileContent(filePath);
@@ -64,7 +49,7 @@ const initializeChain = async (initialPrompt) => {
     // const directory = path.join(__dirname + "/public");
     // await vectorStore.save(directory);
     // const loadedVectorStore=await HNSWLib.load(directory,new OpenAIEmbeddings({openAIApiKey:apiKey}));
-    chain = chains_1.ConversationalRetrievalQAChain.fromLLM(streamModel, vectorStore.asRetriever(), {
+    chain = chains_1.ConversationalRetrievalQAChain.fromLLM(model, vectorStore.asRetriever(), {
         verbose: true
     });
     const response = await chain.call({
