@@ -65,7 +65,7 @@ const initializeChain = async (initialPrompt) => {
     // await vectorStore.save(directory);
     // const loadedVectorStore=await HNSWLib.load(directory,new OpenAIEmbeddings({openAIApiKey:apiKey}));
     chain = chains_1.ConversationalRetrievalQAChain.fromLLM(streamModel, vectorStore.asRetriever(), {
-        verbose: true,
+        verbose: true
     });
     const response = await chain.call({
         question: initialPrompt,
@@ -79,12 +79,7 @@ const initializeChain = async (initialPrompt) => {
 async function personalChatChain(prompt, isFirst) {
     if (isFirst) {
         try {
-            const initialPrompt =`<begin>I want you to play the role of Mohammad Hashemi.
-            I will ask you questions about yourself and you will answer very briefly and creatively and like a human being with feelings and a little humor.
-            Be sure to give me your answers in Farsi and do not use English as much as possible because my English is weak.
-            This is first conversation with Mohammad Hashemi:<end>
-            
-            ${prompt}`;
+            const initialPrompt =`${prompt}`;
             chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
             const response = await initializeChain(initialPrompt);
          
