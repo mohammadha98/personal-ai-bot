@@ -53,7 +53,7 @@ const initializeChain = async (initialPrompt) => {
       questionGeneratorChainOptions: {llm:cheaperModel},
       returnSourceDocuments: false,
       qaChainOptions: {
-        type: "StuffDocumentsChain", // Customize the QA chain type
+        type: "stuff", // Customize the QA chain type
         maxDocuments: 1, // Limit the number of documents to consider
         maxAnswers: 3, // Limit the number of answers to return
         answerSeparator: "\n\n", // Customize the separator between answers
