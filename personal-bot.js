@@ -75,6 +75,10 @@ const initializeChain = async (initialPrompt) => {
     chatHistory.push(new schema_1.ChatMessage(response.text, "bot"));
     // const persianRes=await translatte(response.text,{from:'en',to:'fa'});
     // console.log(persianRes);
+  console.log("***************START OF SOURCE DOCUMENT*******************");
+    console.log(response.sourceDocuments[0]);
+    console.log("***************END OF SOURCE DOCUMENT*******************");
+
     return response;
 };
 async function personalChatChain(prompt, isFirst) {
@@ -88,7 +92,7 @@ async function personalChatChain(prompt, isFirst) {
             ${prompt}`;
             chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
             const response = await initializeChain(initialPrompt);
-         
+           
             return response;
         }
         catch (error) {
