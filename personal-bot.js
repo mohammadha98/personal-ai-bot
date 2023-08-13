@@ -66,6 +66,7 @@ const initializeChain = async (initialPrompt) => {
     // const loadedVectorStore=await HNSWLib.load(directory,new OpenAIEmbeddings({openAIApiKey:apiKey}));
     chain = chains_1.ConversationalRetrievalQAChain.fromLLM(streamModel, vectorStore.asRetriever(), {
         verbose: true,
+        returnSourceDocuments:true,
     });
     const response = await chain.call({
         question: initialPrompt,
