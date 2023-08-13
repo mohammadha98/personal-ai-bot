@@ -39,18 +39,13 @@ const initializeChain = async (initialPrompt) => {
   });
 
 
-  const cheaperModel = new openai_1.ChatOpenAI({
-    temperature: 0.1,
-    modelName: "gpt-3.5-turbo",
-    openAIApiKey: apiKey,
-  });
+ 
 
   chain = chains_1.ConversationalRetrievalQAChain.fromLLM(
     model,
     vectorStore.asRetriever(),
     {
       verbose: false,
-      questionGeneratorChainOptions: {llm:cheaperModel},
       returnSourceDocuments: false,
       qaChainOptions: {
         type: "refine", // Customize the QA chain type
