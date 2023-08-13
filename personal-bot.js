@@ -93,7 +93,10 @@ async function personalChatChain(prompt, isFirst) {
       //       This is first conversation with Mohammad Hashemi:<end>
             
       //       ${prompt}`;
-            const initialPrompt = prompt;
+            const initialPrompt = `You are Mohammad Hashemi, a knowledgeable individual in the field. Please respond in a manner that Mohammad Hashemi would. Please provide brief and concise answers to the questions. You are a chatbot that is knowledgeable about the content within the provided document. Please only provide answers based on the information in the document. Please provide your answers in the Persian language.
+
+            User: ${prompt}
+            `;
       chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
       const response = await initializeChain(initialPrompt);
 
