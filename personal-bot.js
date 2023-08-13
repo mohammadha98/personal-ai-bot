@@ -14,7 +14,6 @@ const openai_2 = require("langchain/embeddings/openai");
 const chains_1 = require("langchain/chains");
 const text_1 = require("langchain/document_loaders/fs/text");
 const schema_1 = require("langchain/schema");
-const translatte = require("translatte");
 let chain;
 let chatHistory = [];
 let vectorStore;
@@ -45,15 +44,10 @@ const initializeChain = async (initialPrompt) => {
     model,
     vectorStore.asRetriever(),
     {
-      verbose: false,
-      returnSourceDocuments: false,
+      verbose: true,
       qaChainOptions: {
         type: "refine", // Customize the QA chain type
-        maxDocuments: 5, // Set the maximum number of documents to consider for answering the question
-        maxAnswerLength: 100, // Set the maximum length of the answer
-        maxPassages: 3, // Set the maximum number of passages to consider for answering the question
-        maxPassageLength: 50, // Set the maximum length of each passage
-      },
+      }
     }
   );
   const response = await chain.call({
