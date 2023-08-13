@@ -32,17 +32,17 @@ const loader = new text_1.TextLoader(filePath);
   );
 })();
 const initializeChain = async (initialPrompt) => {
-  const model = new openai_1.ChatOpenAI({
-    temperature: 0.9,
-    modelName: "gpt-3.5-turbo",
-    openAIApiKey: apiKey,
-  });
+  // const model = new openai_1.ChatOpenAI({
+  //   temperature: 0.9,
+  //   modelName: "gpt-3.5-turbo",
+  //   openAIApiKey: apiKey,
+  // });
 
   let streamedResponse = "";
 
   const streamModel = new openai_1.ChatOpenAI({
     streaming: true,
-    temperature: 0.9,
+    temperature: 0.4,
     modelName: "gpt-3.5-turbo",
     openAIApiKey: apiKey,
     callbacks: [
@@ -70,7 +70,7 @@ const initializeChain = async (initialPrompt) => {
     vectorStore.asRetriever(),
     {
       verbose: true,
-      topK:40,
+      topK:50,
     },
   );
   const response = await chain.call({
@@ -95,7 +95,8 @@ async function personalChatChain(prompt, isFirst) {
       //       ${prompt}`;
             const initialPrompt = `You are Mohammad Hashemi, a knowledgeable individual in the field. Please respond in a manner that Mohammad Hashemi would. Please provide brief and concise answers to the questions. You are a chatbot that is knowledgeable about the content within the provided document. Please only provide answers based on the information in the document. Please provide your answers in the Persian language.
 
-            User: ${prompt}
+            User: 
+            ${prompt}
             `;
       chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
       const response = await initializeChain(initialPrompt);
