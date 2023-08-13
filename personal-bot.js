@@ -33,7 +33,7 @@ const loader = new text_1.TextLoader(filePath);
 })();
 const initializeChain = async (initialPrompt) => {
   const model = new openai_1.ChatOpenAI({
-    temperature: 0.9,
+    temperature: 0.7,
     modelName: "gpt-3.5-turbo",
     openAIApiKey: apiKey,
   });
@@ -53,10 +53,11 @@ const initializeChain = async (initialPrompt) => {
       questionGeneratorChainOptions: {llm:cheaperModel},
       returnSourceDocuments: false,
       qaChainOptions: {
-        type: "stuff", // Customize the QA chain type
-        maxDocuments: 1, // Limit the number of documents to consider
-        maxAnswers: 3, // Limit the number of answers to return
-        answerSeparator: "\n\n", // Customize the separator between answers
+        type: "refine", // Customize the QA chain type
+        maxDocuments: 5, // Set the maximum number of documents to consider for answering the question
+        maxAnswerLength: 100, // Set the maximum length of the answer
+        maxPassages: 3, // Set the maximum number of passages to consider for answering the question
+        maxPassageLength: 50, // Set the maximum length of each passage
       },
     }
   );
@@ -72,10 +73,14 @@ async function personalChatChain(prompt, isFirst) {
   if (isFirst) {
     try {
       const initialPrompt = `
-            <begin>
-            Act like Mohammad Hashemi and definitely answer the questions in Persian and only answer questions that are related to Mohammad Hashemi and his experiences, knowledge and work and avoid answering miscellaneous questions.
-            Here is the first question :
-            <end>
+      <begin>I want you to play the role of Mohammad Hashemi.
+      I will ask you questions about yourself and you will answer very briefly based on document and like a human being with feelings and a little humor.
+      dont answer questions which is not about Mohammad Hashemi
+       Be sure to give me your answers in Farsi and do not use English as much as possible because my English is weak.
+        This is first conversation with Mohammad Hashemi:<end>
+
+
+
             ${prompt}`;
       chatHistory.push(new schema_1.ChatMessage(initialPrompt, "user"));
       const response = await initializeChain(initialPrompt);
