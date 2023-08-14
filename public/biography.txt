@@ -1,26 +1,59 @@
-My name is Mohammad Hashemi
-I am a programmer
-My specialty is the web
-Currently, I am a bachelor's student in software engineering in Isfahan province
-I live in Shahin Shahr
-I have five years of programming experience
-I started with desktop programming
-The first time I got acquainted with programming was in the university and in the course of advanced programming
-Since then, I became interested in programming and started learning by myself
-After some time, I was doing student projects
-After about a year, I moved to Isfahan and got to know the team of programmers in Isfahan
-And I became a member of Isfahan programmers team and started my professional activity
-At the same time as joining Isfahan's programmers team, I entered the field of web programming with C# language and ASP framework
-And I learned html and css
-Then I did a project for the government that took about six months
-After that, I did an electronic store project in the open market
-After some time, I decided to improve my skills in the field of programming and web design
-So I started learning JavaScript, TypeScript and Angular framework
-And at the same time, I updated my knowledge in the field of database programming
-And I learned the T-SQL language
-Since 1999, I entered the field of education and content production in the field of programming at the Kodiad site
-And I published SQL Server and Jquery JavaScript tutorials for free
-And after a year, I started teaching Node.js, angular, typescript
-I did
-And now I'm working and founding soundbox startup
-And the skill that I just started learning is artificial intelligence based development skill using JavaScript and NodeJS.
+**Mohammad Hashemi - Programmer and Web Developer**
+
+Introduction:
+----------------
+I am Mohammad Hashemi, a skilled programmer and web developer. I am 24 years old and I was born in May 1378 A.H. This knowledge base provides insights about my background, expertise and journey in the world of programming.
+
+Background:
+-------------
+I am a dedicated programmer specializing in web development. Currently, I am studying at Azad University in Isfahan province, in software engineering. My home is in Shahin Shahr, where I continue to improve my programming skills, and at the same time, I teach online programming courses at Codeyad Academy.
+And now I have more than ten thousand online students
+
+Programming Experience:
+------------------------
+With five years of experience under my belt, I have come a long way. My journey began in desktop programming, sparked by a university course on advanced programming. This ignited my passion, and I've been self-learning ever since.
+
+Professional Progression:
+--------------------------
+After relocating to Isfahan, I joined the Isfahan programmers team, marking the start of my professional career. I ventured into web programming using the C# language and ASP framework. My expertise expanded to encompass HTML, CSS, and JavaScript AND Angular framework.
+
+Notable Projects:
+-------------------
+I have successfully completed diverse projects. An important milestone was a six-month government project. Subsequently, I did the e-shop project for Open Market.
+For some time, I worked on international projects with the Groupplanning team on the Apurk site and completed two successful projects there.
+And I did several educational projects in my online courses for students with the aim of teaching programming
+
+Skill Enrichment:
+-------------------
+To stay ahead, I dived into JavaScript, TypeScript, and the Angular framework and mongoDB database. I also honed my database programming skills, mastering the T-SQL language.
+
+Education and Outreach:
+-------------------------
+Since 1399 AH, I have helped the programming community of Iran. Through the Codeyad site, I have provided SQL Server, jQuery, Node.js, Angular and TypeScript tutorials.
+And my most famous course is the free JavaScript course, which is one of the most popular Persian JavaScript courses
+The link to my courses is as follows :
+JavaScript course link:
+https://codeyad.com/c/f302
+SQL Server course link:
+https://codeyad.com/c/82ca
+Typescript course link:
+https://codeyad.com/c/af84
+Angular course link:
+https://codeyad.com/c/d88
+NODE JS course link:
+https://codeyad.com/c/5f84
+My profile link in the Codeyad Academy as a teacher:
+https://codeyad.com/Masters/Profile/mohammadHashemi
+
+Entrepreneurial Pursuits:
+---------------------------
+Currently, I am actively involved in my startup, Soundbox with a professional team. This venture combines my passion for programming and innovation.
+And I also continue my activity in the market of programming education.
+
+Future Endeavors:
+---------------------
+My journey continues as I explore the realm of AI development using JavaScript and Node.js. I am excited to contribute my expertise to cutting-edge technologies.
+
+Conclusion:
+----------------
+This knowledge base provides a comprehensive overview of my programming journey, skills, and contributions. Feel free to ask questions related to my expertise, and I'll be delighted to assist you.
